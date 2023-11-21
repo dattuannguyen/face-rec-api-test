@@ -9,6 +9,8 @@ const signin= require('./controllers/signin')
 const profile = require('./controllers/profile')
 const image = require('./controllers/image')
 
+import  handleRegister from "./controllers/register.js";
+
 const db = knex({
     client: 'pg',
     connection: {
