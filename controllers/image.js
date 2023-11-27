@@ -4,7 +4,9 @@ const APP_ID = 'test';
 const MODEL_ID = 'face-detection';
 const MODEL_VERSION_ID = '6dc7e46bc9124c5c8824be4822abe105';
 
-const { ClarifaiStub, grpc } = require("clarifai-nodejs-grpc");
+// const { ClarifaiStub, grpc } = require("clarifai-nodejs-grpc");
+
+import {ClarifaiStub,grpc} from "clarifai-nodejs-grpc"
 
 const stub = ClarifaiStub.grpc();
 
@@ -58,7 +60,10 @@ const handleImage = (req, res , db)=>{
         .catch(err => res.status(400).json('unable to get entries'))
 }
 
-module.exports ={
-    handleImage,
-    handleApiCall
-}
+// module.exports ={
+//     handleImage,
+//     handleApiCall
+// }
+
+export {handleImage,handleApiCall};
+// export default handleApiCall;

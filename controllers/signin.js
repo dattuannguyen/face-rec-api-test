@@ -1,4 +1,5 @@
-const bcrypt = require("bcrypt-nodejs");
+// const bcrypt = require("bcrypt-nodejs");
+import bcrypt from "bcrypt-nodejs";
 const handleSignin = (req, res ,db,bcrypt)=>{
     const {email,password } = req.body;
     if (!email  || !password){
@@ -20,6 +21,8 @@ const handleSignin = (req, res ,db,bcrypt)=>{
         }).catch(err => res.status(400).json('wrong credentials'))
 }
 
-module.exports ={
-    handleSignin
-}
+// module.exports ={
+//     handleSignin
+// }
+
+export default handleSignin;
